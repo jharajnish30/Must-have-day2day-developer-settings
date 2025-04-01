@@ -1,3 +1,56 @@
+Adacity Voice over settings - RKJ-VoiceOver
+````````````````````````````````````````````````````````````````
+1. Normalize
+	> Remove DC offset (center on 0.0 vertically) - CHECKED
+	> Normalize peak amplitude to - "CHECKED,-3.0db"
+	> Normalize stereo channels independently - CHECKED
+2. Amplify
+	> Amplification (dB) - "3.256"
+	> New Peak Amplitude (dB) - "0.0"
+	> Allow clipping - UNCHECKED
+3. Noise Reduction
+	> Noise reduction (dB) - "7"
+	> Sensitivity - "6.00"
+	> Frequency smoothing (bands) - "3"
+	> Reduce - CHECKED
+4. Compressor
+	> Threshold - "-12dB"
+	> Noise Floor - "-40dB"
+	> Ratio - 2:1
+	> Attack Time - "0.20secs"
+	> Release Time - "1.0secs"
+	> Make-up gain for 0 dB after compressing - CHECKED
+	> Compress based on Peaks - UNCHECKED
+5. Filter Curve (Bass Boost)
+	> "9dB,20Hz" to "9dB,100Hz" to "0dB,500Hz"
+	> Linear Frequency Scale - UNCHECKED
+	> Show grid lines - CHECKED
+6. Filter Curve (Trebble Boost)
+	> "0dB,4000Hz" to "0dB,5000Hz" to "9dB,20000Hz"
+	> Linear Frequency Scale - UNCHECKED
+	> Show grid lines - CHECKED
+7. Filter Curve EQ
+	> Low rolloff for speech - "-30dB,60Hz" to "0dB,80Hz"
+8. Normalize
+	> Remove DC offset (center on 0.0 vertically) - CHECKED
+	> Normalize peak amplitude to - CHECKED, "-1.0dB"
+	> Normalize stereo channels independently - UNCHECKED
+9. Limiter (Hard Limit)
+	> Hard Limit
+	> Input Gain (dB) mono/Left - "0.00"
+	> Input Gain (dB) Right channel - "0.00"
+	> Limit to (dB) - "-1.10"
+	> Hold (ms) - "10.00"
+	> Apply Make-up Gain - "No"
+10. Noise Reduction
+	> Noise reduction (dB) - "7"
+	> Sensitivity - "6.00"
+	> Frequency smoothing (bands) - "3"
+	> Reduce - CHECKED
+
+````````````````````````````````````````````````````````````````
+MACRO CODE
+````````````````````````````````````````````````````````````````
 Normalize:ApplyGain="1" PeakLevel="-3" RemoveDcOffset="1" StereoIndependent="1"
 Amplify:AllowClipping="1" Ratio="1.8005285"
 NoiseReduction:NoiseReduction="7" Sensitivity="6.00" FrequencySmoothing="3" Reduce="1"
@@ -8,3 +61,4 @@ FilterCurve:f0="50" f1="60" f2="65" f3="70" f4="80" f5="90" f6="100" FilterLengt
 Normalize:ApplyGain="1" PeakLevel="-3" RemoveDcOffset="1" StereoIndependent="1"
 Limiter:gain-L="0" gain-R="0" hold="10" makeup="No" thresh="-1.1" type="HardLimit"
 NoiseReduction:NoiseReduction="7" Sensitivity="6.00" FrequencySmoothing="3" Reduce="1"
+````````````````````````````````````````````````````````````````
